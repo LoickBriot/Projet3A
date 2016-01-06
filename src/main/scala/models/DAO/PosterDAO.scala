@@ -1,12 +1,6 @@
 package models.DAO
 
-import play.api._
-import play.api.mvc._
-import play.api.db.DB
-import play.api.Play.current
-import java.io.File
-import java.util.UUID
-import scala.concurrent.ExecutionContext.Implicits.global
+
 import slick.driver.MySQLDriver.api._
 import models.Tables
 import models.Tables._
@@ -22,10 +16,18 @@ class PosterDAO {
   val db = Database.forConfig("projet3A")
   val poster = TableQuery[Poster]
   
-  def insert(id:Int, inputname: String, uniquename: String,  text: String, date: String, location: String, price: String, website: String, email: String, phone: String,processBool:Boolean){    
-    var query = poster += Tables.PosterRow(id, Some(inputname), Some(uniquename), Some(text), Some(date), Some(location), Some(price), Some(website), Some(email), Some(phone), processBool)
+  def close() = db.close()
+  
+  def insert(newObj: Tables.PosterRow){    
+    var query = poster += newObj 
     var result =  Await.result(db.run(query),Duration.Inf)
   
+  }
+  
+   def update(oldObj: Tables.PosterRow, newObj: Tables.PosterRow)={
+    val query = for { c <- poster if c.id === oldObj.id } yield c
+    val updateAction = query.update(newObj)
+    Await.result(db.run(updateAction), Duration.Inf)
   }
   
   

@@ -1,13 +1,13 @@
-New log file opened at Wed Jan 06 13:33:57 CET 2016 by 12324@LOICK-TOSH
-Taking next connection to: 1722
-New client attempting to connect on port: 1723-1722
-  Address = /192.168.56.1:1722
-This client on port 1723 has uuid 354502b4-8376-45d2-94e8-f9c592c581d3 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
-Connected Clients: activator-354502b4-8376-45d2-94e8-f9c592c581d3
-Taking next connection to: 1722
-New client attempting to connect on port: 1724-1722
-  Address = /192.168.56.1:1722
-Handshake exception on socket: 1724
+New log file opened at Wed Jan 06 14:05:05 CET 2016 by 12168@LOICK-TOSH
+Taking next connection to: 2020
+New client attempting to connect on port: 2021-2020
+  Address = /192.168.56.1:2020
+This client on port 2021 has uuid 5f326c9d-90e0-4c69-8de6-0a7be19f08b8 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-5f326c9d-90e0-4c69-8de6-0a7be19f08b8
+Taking next connection to: 2020
+New client attempting to connect on port: 2022-2020
+  Address = /192.168.56.1:2020
+Handshake exception on socket: 2022
 sbt.impl.ipc.HandshakeException: Unable to perform handshake
 	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
 	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
@@ -17,22 +17,90 @@ Caused by: java.io.EOFException
 	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
 	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
 	... 2 more
-Taking next connection to: 1722
-New client attempting to connect on port: 1725-1722
-  Address = /192.168.56.1:1722
-This client on port 1725 has uuid b94c5438-080d-47e4-9851-a35abc36c307 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: activator-354502b4-8376-45d2-94e8-f9c592c581d3, play-fork-run-b94c5438-080d-47e4-9851-a35abc36c307
-Taking next connection to: 1722
+Taking next connection to: 2020
+New client attempting to connect on port: 2023-2020
+  Address = /192.168.56.1:2020
+This client on port 2023 has uuid 2dbafd5b-e3f8-48a8-b046-60c3fa65bb61 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-5f326c9d-90e0-4c69-8de6-0a7be19f08b8, activator-2dbafd5b-e3f8-48a8-b046-60c3fa65bb61
+Taking next connection to: 2020
+New client attempting to connect on port: 2026-2020
+  Address = /192.168.56.1:2020
+Handshake exception on socket: 2026
+sbt.impl.ipc.HandshakeException: Unable to perform handshake
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
+	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
+	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
+Caused by: java.io.EOFException
+	at java.io.DataInputStream.readInt(Unknown Source)
+	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
+	... 2 more
+Taking next connection to: 2020
+New client attempting to connect on port: 2027-2020
+  Address = /192.168.56.1:2020
+This client on port 2027 has uuid 3787e7ec-1ff4-4186-baff-d680de95b411 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: activator-2dbafd5b-e3f8-48a8-b046-60c3fa65bb61, play-fork-run-3787e7ec-1ff4-4186-baff-d680de95b411
+Taking next connection to: 2020
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 1722
+Taking next connection to: 2020
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 1722
+Taking next connection to: 2020
 Checking to see if clients are empty...
-No non-daemon clients connected after 3 min. Shutting down.
-1 daemon clients are connected.
-Server socket thread exiting.
-1 clients open, will close them...
-All client sockets have been closed.
-Closing the 12324@LOICK-TOSH logs at Wed Jan 06 13:44:03 CET 2016, goodbye.
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 2020
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 2020
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 2020
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 2020
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 2020
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 2020
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 2020
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 2020
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 2020
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 2020
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 2020
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 2020
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 2020
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 2020
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 2020
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 2020
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 2020
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 2020
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 2020

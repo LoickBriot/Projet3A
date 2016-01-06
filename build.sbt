@@ -1,4 +1,4 @@
-name := """play-sbt-layout-seed"""
+name := """Projet3A"""
 
 version := "1.0-SNAPSHOT"
 
