@@ -1,0 +1,59 @@
+package controllers.application     
+     
+import play.api._
+import play.api.mvc._
+import play.api.db.DB
+import play.api.Play.current
+import java.io.File
+import java.util.UUID
+import scala.concurrent.ExecutionContext.Implicits.global
+import org.opencv.core._
+import org.opencv.highgui.Highgui
+import org.opencv.imgproc._
+
+
+
+ 
+class aboutController extends Controller { 
+    
+    val rootPath: String = System.getProperties().get("user.dir").toString()
+    // System.load("/home/loick/workspace/play-sbt-layout-seed/lib/libtextImageReader.so")
+       
+    def aboutAction = Action {
+        System.load(rootPath + File.separator+ "lib" + File.separator+"textImageReader.so")     
+        val reader = new textImageReader
+        var text = reader.getText("/home/loick/workspacecpp/firstOpenCV/image/affiche_concert_glorious.jpg")
+
+	System.load(rootPath + File.separator+ "lib" + File.separator+ "libopencv_java2411.so" );
+	var image : Mat = null
+	var filePath="/home/loick/workspace/play-sbt-layout-seed/src/main/public/images/description_projet.png"
+	try {
+	    image = Highgui.imread(filePath);
+	    println("Load CV Image :   " + filePath)
+	} catch{
+	    case e: Exception => println( this.getClass.getName + s".loadCVImage : impossible to load $filePath" );
+	}
+       
+        Ok(views.html.aboutPage("About Page","h"))
+    }
+     
+}
+
+ /*
+    val rootPath: String = System.getProperties().get("user.dir").toString()
+   
+    //System.loadLibrary("libopencv_java2411");
+    System.load(rootPath + File.separator+ "lib" + File.separator+ "libopencv_java2411.so" );
+    var image : Mat = null
+       var filePath="/home/loick/workspace/play-sbt-layout-seed/src/main/public/images/description_projet.png"
+       try {
+            image = Highgui.imread(filePath);
+            println("Load CV Image :   " + filePath)
+        } catch{
+            case e: Exception => println( this.getClass.getName + s".loadCVImage : impossible to load $filePath" );
+        }
+        //var mat = Mat.eye( 3, 3, CvType.CV_8UC1 );
+       // println( "mat = " + mat.dump() );
+       */
+       
+

@@ -1,0 +1,42 @@
+@(title: String, message: String)
+
+
+@mainTemplate("Projet3A - Contact"){
+    
+    <div class="row">
+        <h1 style="margin-top:15px;margin-bottom:25px;">Page de contact</h1>
+        <div style="text-align:justify;">
+            <p>Vous souhaitez des informations concernant ce projet, les technologies utilisées ou sur la méthodologie? Contactez-moi en précisant votre demande via ce formulaire.</p>
+        </div>
+    
+    
+        <div class="small-12 large-12 columns">
+            <div class="row">
+                <div class="small-12 columns">
+                    <form>
+                       <div class="row">
+                            <div class="small-12 medium-6 columns">
+                                <label>Nom - Prénom</label>
+                                <input type="text" placeholder=""/>
+                            </div>
+    
+                            <div class="small-12 medium-6 columns">
+                                <label>Courriel</label>
+                                <input type="text" placeholder=""/>
+                            </div>
+                        </div>
+    
+                        <div class="row">
+                            <div class="small-12 columns">
+                                <label>Message</label>
+                                <textarea placeholder="" style="height:150px;"></textarea>
+                            </div>
+                        </div>
+    
+                        <a href="#" class="button">Soumettre</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+}

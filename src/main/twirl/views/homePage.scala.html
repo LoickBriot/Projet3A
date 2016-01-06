@@ -1,0 +1,37 @@
+@(title: String, message: String)
+
+
+@mainTemplate("Projet3A - Home"){
+    
+    <div class="row">
+        <h1 style="margin-top:15px;margin-bottom:25px;">Page d'accueil</h1>
+    
+        <div style="text-align:justify;">
+            <p>Ce site internet est le résultat du projet de dernière année d'école d'ingénieur de Loïck BRIOT, élève au sein du département informatique de Mines Nancy.</p>
+            <p>L'objectif de ce projet est d'être capable d'extraire des informations à partir d'affiches ou de flyers, telles que des dates, des noms de ville, des adresses, des sites internet, des courriels ou des numéros de téléphone.</p>
+        </div>
+    </div>
+    
+    
+    <div class="row">
+        <div class="small-12 large-12 columns">
+            <div class="row ">
+                <div class="small-12 medium-12 large-8 columns">
+                    <img src="@routes.Assets.versioned("images/description_projet.png")">       
+                </div>
+                <div class="small-12 medium-12 large-4 columns">
+                    <div class="row">
+                        <div class="small-12 medium-12 medium-centered columns">
+                            <div style="text-align:justify;">
+                                <p>Le projet peut se décomposer en six étapes qui sont schématisées ci-joint. Les étapes 1, 2, 5 et 6 utilisent le framework Play2!, le language scala, slick et Zurb.</p>      
+                                <p>Les étapes 3 correspond au traitement de l'affiche grâce à la librairie OpenCV, et à l'OCRisation grâce à la librairie C++ Tesseract.</p>      
+                                <p>Les étapes 4 correspond au parsage des données textes extraites lors de l'étape 3. Nous sommes capables d'extraire des informations telles que des dates, des noms de ville ou des numéros de téléphone grâce à des expressions régulières et la techno ElasticSearch. </p>      
+                            </div>      
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </div>
+    
+}

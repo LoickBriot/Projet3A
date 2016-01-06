@@ -1,0 +1,97 @@
+@(title: String)(content: Html)
+
+
+
+<html lang="fr">
+
+    <head>
+        <title>@title</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" href="@routes.Assets.versioned("css/normalize.css")">
+        <link rel="stylesheet" href="@routes.Assets.versioned("css/foundation.min.css")">
+        <link rel="stylesheet" href="@routes.Assets.versioned("css/app.css")">
+        <script src="@routes.Assets.versioned("javascripts/vendor/jquery.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("javascripts/foundation.min.js")" type="text/javascript"></script>
+    
+    </head>
+
+
+    <body>
+    
+    
+        <div class="hide-for-small" style="margin-bottom:120px;">
+            <div class="fixed">
+                <!-- Top Bar with menu options -->
+                <div class="icon-bar seven-up" role="navigation">
+                    <a  href="/" class="item">
+                        <img src="@routes.Assets.versioned("images/icons/fi-home.png")">
+                        <label id='itemlabel1'>Accueil</label>
+                    </a>
+                    <a  href="/add" class="item">
+                       <img src="@routes.Assets.versioned("images/icons/fi-upload.png")">
+                        <label id='itemlabel1'>Upload</label>
+                    </a>
+                    <a  href="/search" class="item">
+                      <img src="@routes.Assets.versioned("images/icons/fi-magnifying-glass.png")">
+                        <label id='itemlabel1'>Recherche</label>
+                    </a>
+                    <a  href="/about" class="item">
+                       <img src="@routes.Assets.versioned("images/icons/fi-info.png")">
+                        <label id='itemlabel1'>A propos</label>
+                    </a>
+                    <a  href="/contact" class="item">
+                       <img src="@routes.Assets.versioned("images/icons/fi-mail.png")">
+                        <label id='itemlabel1'>Contact</label>
+                    </a>
+                    <div class="right">
+                        <h5 style="font-weight:bold;color:white;margin-top:5%;">Extraire des données à partir d'image</h5>
+                    </div>
+                </div>
+            </div> 
+        </div> 
+        
+        <div class="show-for-small" style="margin-bottom:50px;">
+            <div class="fixed">
+                <nav class="top-bar" data-topbar role="navigation">
+                     <ul class="title-area">
+                        <li class="name">
+                          <h1><a href="#">Extraire des données à partir d'image</a></h1>
+                        </li>
+                         <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+                        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+                      </ul>
+                    
+                      <section class="top-bar-section">
+                        <!-- Right Nav Section -->
+                        <ul class="right">
+                          <li><a href="/">Accueil</a></li>
+                          <li><a href="/add">Upload</a></li>
+                          <li><a href="/search">Recherche</a></li>
+                          <li><a href="/about">A propos</a></li>
+                          <li><a href="/contact">Contact</a></li>
+                        </ul>
+                     </section>
+                </nav>
+          </div> 
+        </div> 
+          
+            
+        <div class="row">
+			<div class="large-12 columns">
+				@content
+			</div>
+		</div>
+        <footer class="footer">
+              <div class="row" >
+                  <p style="color:white;font-size:20px;">Loïck BRIOT - Mines Nancy - Projet 3A</p>
+                  <p style="color:white;font-size:16px;">Copywrite © 2015</p>
+              </div>
+        </footer>
+        
+      
+    <script>
+        $(document).foundation();
+    </script>
+    
+    </body>
+</html>
