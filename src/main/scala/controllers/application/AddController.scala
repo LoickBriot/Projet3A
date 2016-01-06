@@ -11,7 +11,7 @@ import models.Handler._
 
 
 class AddController extends Controller {
-
+  
   /*
     * Initialisation des paths : root, folder d'upload (paths relatif at absolu)
     */
@@ -22,16 +22,16 @@ class AddController extends Controller {
   val file: File = new File(absolutePathToUploadFile)
   if (!file.exists()) file.mkdirs();
 
+  
   /*
     * Actions pour la page d'upload
     */
-
   def addAction = Action {
     Ok(views.html.addPage(""))
   }
 
+  
   def uploadAction = Action(parse.multipartFormData) { request =>
-
     var result = ""
 
     try {
@@ -71,6 +71,7 @@ class AddController extends Controller {
     Ok(views.html.addPage(result))
   }
 
+  
   def getExtension(inputName: String): String = {
     var extension = ""
     if (inputName.lastIndexOf('.') > 0) {
@@ -79,6 +80,7 @@ class AddController extends Controller {
     return extension
   }
 
+  
   def generateAnUniqueName(imageName: String): String = {
 
     var extension = getExtension(imageName)
@@ -98,4 +100,3 @@ class AddController extends Controller {
   }
 
 }
-

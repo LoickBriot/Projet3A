@@ -20,6 +20,7 @@ class SearchController extends Controller {
   val file: File = new File(absolutePathToUploadFile)
   if (!file.exists()) file.mkdirs();
 
+  
   /* 
     * Actions pour la page de recherche
     */
@@ -34,6 +35,7 @@ class SearchController extends Controller {
     Ok(views.html.searchPage("Search Page", uniqueName_fileList, image_path, image_index, name_list, value_list))
   }
 
+  
   def searchPostAction = Action(parse.multipartFormData) { request =>
 
     var uniqueName_fileList = getUniqueNameList()
@@ -45,6 +47,7 @@ class SearchController extends Controller {
     Ok(views.html.searchPage("Search Page", uniqueName_fileList, image_path, image_index, name_list, value_list))
   }
 
+  
   def getUniqueNameList(): List[String] = {
     var posterDAO = new PosterDAO()
     var result = posterDAO.findAll().toList
@@ -53,10 +56,12 @@ class SearchController extends Controller {
     return uniqueName_fileList
   }
 
+  
   def getNameField(): List[String] = {
     return List[String]("Nom", "Texte", "Date", "Lieu", "Prix", "Site Internet", "Courriel", "Telephone")
   }
 
+  
   def getValueField(imageName: String): List[String] = {
     var result_list = List[String]()
     try {
