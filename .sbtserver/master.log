@@ -20156,3 +20156,55 @@ All newly invalidated sources after taking into account (previously) recompiled 
 Total time: 4 s, completed 7 janv. 2016 00:08:36
 > server-post-command-cleanup
 > server-handle-next-server-request
+> {file:/C:/Users/LOICK/git/Projet3A/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@b3c69f, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(C:\Users\LOICK\git\Projet3A\src\main\resources\application.conf,C:\Users\LOICK\git\Projet3A\target\scala-2.11\classes\application.conf)
+	(C:\Users\LOICK\git\Projet3A\src\main\resources\logback.xml,C:\Users\LOICK\git\Projet3A\target\scala-2.11\classes\logback.xml)
+	(C:\Users\LOICK\git\Projet3A\src\main\resources\routes,C:\Users\LOICK\git\Projet3A\target\scala-2.11\classes\routes)
+Total time: 3 s, completed 7 janv. 2016 00:10:08
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/LOICK/git/Projet3A/}root/*:playForkReload
+Evaluating tasks: *:playForkReload
+Running task... Cancel: sbt.server.ServerTaskCancellation@cfe84e, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Copy resource mappings: 
+	(C:\Users\LOICK\git\Projet3A\src\main\resources\application.conf,C:\Users\LOICK\git\Projet3A\target\scala-2.11\classes\application.conf)
+	(C:\Users\LOICK\git\Projet3A\src\main\resources\logback.xml,C:\Users\LOICK\git\Projet3A\target\scala-2.11\classes\logback.xml)
+	(C:\Users\LOICK\git\Projet3A\src\main\resources\routes,C:\Users\LOICK\git\Projet3A\target\scala-2.11\classes\routes)
+Total time: 4 s, completed 7 janv. 2016 00:10:15
+> server-post-command-cleanup
+> server-handle-next-server-request
