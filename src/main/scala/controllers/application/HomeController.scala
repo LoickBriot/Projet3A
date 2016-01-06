@@ -9,7 +9,7 @@ import java.util.UUID
 import scala.concurrent.ExecutionContext.Implicits.global
            
  
-class homeController extends Controller { 
+class HomeController extends Controller { 
     
     def homeAction = Action {
         Ok(views.html.homePage("Home Page","Home"))

@@ -10,7 +10,7 @@ import models.DAO._
 import models.Handler._
 
 
-class addController extends Controller {
+class AddController extends Controller {
 
   /*
     * Initialisation des paths : root, folder d'upload (paths relatif at absolu)

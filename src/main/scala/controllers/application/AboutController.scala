@@ -7,7 +7,7 @@ import play.api.Play.current
 import java.io.File
 import java.util.UUID
 
-class aboutController extends Controller { 
+class AboutController extends Controller { 
     
     
 

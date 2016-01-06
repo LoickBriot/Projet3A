@@ -9,7 +9,7 @@ import java.util.UUID
 import scala.concurrent.ExecutionContext.Implicits.global
            
  
-class contactController extends Controller { 
+class ContactController extends Controller { 
     
     def contactAction = Action {
         Ok(views.html.contactPage("Contact Page","Contact"))

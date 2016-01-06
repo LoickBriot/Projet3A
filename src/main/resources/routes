@@ -3,14 +3,14 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.application.homeController.homeAction
-GET     /add                        controllers.application.addController.addAction
-GET     /search                      controllers.application.searchController.searchAction
-GET     /about                      controllers.application.aboutController.aboutAction
-GET     /contact                    controllers.application.contactController.contactAction
+GET     /                           controllers.application.HomeController.homeAction
+GET     /add                        controllers.application.AddController.addAction
+GET     /search                      controllers.application.SearchController.searchAction
+GET     /about                      controllers.application.AboutController.aboutAction
+GET     /contact                    controllers.application.ContactController.contactAction
 
-POST    /search                     controllers.application.searchController.searchPostAction
-POST    /upload                     controllers.application.addController.uploadAction
+POST    /search                     controllers.application.SearchController.searchPostAction
+POST    /upload                     controllers.application.AddController.uploadAction
 
 
 # Map static resources from the /public folder to the /assets URL path

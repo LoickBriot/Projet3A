@@ -1,5 +1,6 @@
 package controllers.application
 
+
 import play.api._
 import play.api.mvc._
 import play.api.Play.current
@@ -8,9 +9,8 @@ import java.util.UUID
 import scala.concurrent.ExecutionContext.Implicits.global
 import models.DAO._
 
-
-class searchController extends Controller {
-
+class SearchController extends Controller {
+  
   /*
     * Initialisation des paths : root, folder d'upload (paths relatif at absolu)
     */
@@ -31,7 +31,7 @@ class searchController extends Controller {
     var name_list = getNameField()
     var value_list = getValueField(uniqueName_fileList(0))
 
-    Ok(views.html.searchPage("Search Page", uniqueName_fileList.reverse, image_path, image_index, name_list, value_list))
+    Ok(views.html.searchPage("Search Page", uniqueName_fileList, image_path, image_index, name_list, value_list))
   }
 
   def searchPostAction = Action(parse.multipartFormData) { request =>
@@ -42,7 +42,7 @@ class searchController extends Controller {
     var name_list = getNameField()
     var value_list = getValueField(request.body.dataParts.get("posterName").head(0))
 
-    Ok(views.html.searchPage("Search Page", uniqueName_fileList.reverse, image_path, image_index, name_list, value_list))
+    Ok(views.html.searchPage("Search Page", uniqueName_fileList, image_path, image_index, name_list, value_list))
   }
 
   def getUniqueNameList(): List[String] = {
