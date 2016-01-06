@@ -8,9 +8,7 @@ import java.util.UUID
 import scala.concurrent.ExecutionContext.Implicits.global
 import models.DAO._
 import models.Handler._
-import models.Tables
-import models.Tables._
-import models.Tables.profile.api._
+
 
 class addController extends Controller {
 
@@ -53,7 +51,6 @@ class addController extends Controller {
           /* Insert the poster in the DB */
           val newObjToInsert = posterHandler.newRow(0, inputName, uniqueName, "", "", "", "", "", "", "", false)          
           posterDAO.insert(newObjToInsert)
-
         }
 
         /* Make return comment for user */

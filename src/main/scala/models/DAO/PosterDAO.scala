@@ -20,8 +20,7 @@ class PosterDAO {
   
   def insert(newObj: Tables.PosterRow){    
     var query = poster += newObj 
-    var result =  Await.result(db.run(query),Duration.Inf)
-  
+    var result =  Await.result(db.run(query),Duration.Inf)  
   }
   
    def update(oldObj: Tables.PosterRow, newObj: Tables.PosterRow)={
