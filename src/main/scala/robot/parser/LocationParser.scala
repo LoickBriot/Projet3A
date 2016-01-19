@@ -99,6 +99,7 @@ class LocationParser {
     return result
   }
 
+  
   private def processTextBeforeRegex(content: String): String = {
     var cleanText = content.toLowerCase.replaceAll("[^a-zA-Z0-9_\\-\\'\\ \\n]", "").replaceAll("\\n", " ").replaceAll("-", " ")
 
