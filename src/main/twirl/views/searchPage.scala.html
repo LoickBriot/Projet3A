@@ -35,7 +35,7 @@
     
         <!-- 2. Add images to <div class="fotorama"></div>. -->
         <div class="row">
-            <div class="small-12 medium-5 large-6 columns">
+            <div class="small-12 medium-6 large-6 columns">
                 <div style="text-align:justify;">
                     <p>Praesent dignissim sit amet sapien vel rhoncus. Suspendisse tincidunt lobortis enim, varius ultrices metus consequat a. Phasellus vitae eleifend turpis, a commodo est. Sed vehicula sed augue nec tincidunt.</p>
                 </div>
@@ -48,33 +48,40 @@
                             <button class="button round secondary" onclick="nextPoster();">Affiche suivante</button>
                         </div>
                     </div> 
-                    <table style="display: inline-block;width:90%;">
-                        <caption style="margin-bottom:10px;">Information sur l'affiche</caption>
-                        @for(i <- 0 until name_table.length){
-                            <tr>
-                               <td style="border: 1px solid black; width:40%;text-align:center;font-weight:bold;">@name_table(i) :</td>
-                               <td style="border: 1px solid black; width:60%;text-align:center;">@value_table(i)</td>
-                           </tr>
-                        }
-                    </table>
-                
-                   <div style="display: inline-block;width:60%;">
-                         <form role="form" id="posterForm"  enctype="multipart/form-data" action="@controllers.application.routes.SearchController.searchPostAction" method="post">
-                           
-                            <select style="width: 50%;visibility:hidden;" name='posterName' id='posterName'>
-                                @for(file<-file_list){
-                                    @if(image_path.indexOf(file)>=0){
-                                        <option value="@file"selected="selected"> @file </option>
-                                    } else {
-                                        <option value="@file"> @file </option>
-                                    }
-                                }
-                            </select>
-                        </form>
+                    
+                    <div class="small-12 medium-12 large-12 columns">
+                     <table style="text-align: center;width:100%;table-layout: fixed;;">
+                         <caption style="margin-bottom:10px;">Information sur l'affiche</caption>
+                         @for(i <- 0 until name_table.length){
+                             <tr>
+                                <td style="word-wrap: break-word;border: 1px solid black; width:30%;text-align:center;font-weight:bold;">@name_table(i) :</td>
+                                <td style="word-wrap: break-word;border: 1px solid black; width:70%;text-align:center;">@value_table(i)</td>
+                            </tr>
+                         }
+                     </table>
+                    </div>
+                    <div class="small-7 medium-7 large-7 columns">
                     </div>
                 </div>
+            
+                
+               <div style="display: inline-block;width:60%;">
+                     <form role="form" id="posterForm"  enctype="multipart/form-data" action="@controllers.application.routes.SearchController.searchPostAction" method="post">
+                       
+                        <select style="width: 50%;visibility:hidden;" name='posterName' id='posterName'>
+                            @for(file<-file_list){
+                                @if(image_path.indexOf(file)>=0){
+                                    <option value="@file"selected="selected"> @file </option>
+                                } else {
+                                    <option value="@file"> @file </option>
+                                }
+                            }
+                        </select>
+                    </form>
+                </div>
+                
             </div>
-            <div class="small-12 medium-7 large-6 columns">
+            <div class="small-12 medium-6 large-6 columns">
                 <div style="text-align: center">
                     <div class="fotorama" style="width:100%;display: inline-block;">
                         <img src="@image_path"> 

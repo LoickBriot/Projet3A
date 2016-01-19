@@ -58,7 +58,7 @@ class SearchController extends Controller {
 
   
   def getNameField(): List[String] = {
-    return List[String]("Nom", "Texte", "Date", "Lieu", "Prix", "Site Internet", "Courriel", "Telephone")
+    return List[String]("Nom", "Date", "Lieu", "Prix", "Site Internet", "Courriel", "Telephone", "Texte")
   }
 
   
@@ -66,7 +66,7 @@ class SearchController extends Controller {
     var result_list = List[String]()
     try {
       var posterDAO = new PosterDAO()
-      result_list = posterDAO.findByUniqueName(imageName).flatMap(p => List(p.inputname.getOrElse(""), p.text.getOrElse(""), p.date.getOrElse(""), p.location.getOrElse(""), p.price.getOrElse(""), p.website.getOrElse(""), p.email.getOrElse(""), p.phone.getOrElse(""))).toList
+      result_list = posterDAO.findByUniqueName(imageName).flatMap(p => List(p.inputname.getOrElse(""), p.date.getOrElse(""), p.location.getOrElse(""), p.price.getOrElse(""), p.website.getOrElse(""), p.email.getOrElse(""), p.phone.getOrElse(""), p.text.getOrElse(""))).toList
 
       if (result_list.isEmpty) result_list = List[String]("n.c", "n.c", "n.c", "n.c", "n.c", "n.c", "n.c", "n.c")
 

@@ -15,8 +15,8 @@ class WebsiteParser {
   }
 
   private def processTextBeforeRegex(content: String): String = {
-    var cleanText = content.toLowerCase.replaceAll("[^a-zA-Z0-9\\_\\.\\@\\-\\n\\ ]", "").replaceAll("(\\n)+", " ")
-    //cleanText = cleanText.replaceAll("[iIl|]", "1")
+    var cleanText = content.toLowerCase.replaceAll("[^a-zA-Z0-9\\/\\:\\_\\.\\@\\-\\n\\ \\—]", "").replaceAll("(\\n)+", " ").replaceAll("—", "-")
+    cleanText = cleanText.replaceAll("[|]", "l")
     return cleanText
   }
 
